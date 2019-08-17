@@ -1,0 +1,24 @@
+# Idea Files
+.idea/*
+!.idea/runConfigurations/
+!.idea/vcs.xml
+
+# Ignore temp files...I like VI, don't you?!
+*~
+*.swp
+
+# Ignore OS X generated files
+.DS_Store
+
+# Like to make copies of the original before modifying?  Name it with .OLD or .BACKUP extension
+**/*.OLD
+**/*.BACKUP
+
+# Ignore transient build artifacts
+bin/
+test/coverage.*
+test/tests.*
+go.sum
+
+# DO NOT COMMIT as there _may_ be secrets!
+config.yaml
