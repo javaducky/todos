@@ -1,10 +1,14 @@
 package app
 
-import "github.com/sirupsen/logrus"
+import (
+	"github.com/javaducky/todos/db"
+	"github.com/sirupsen/logrus"
+)
 
 type Context struct {
 	Logger        logrus.FieldLogger
 	RemoteAddress string
+	Database      *db.Database
 }
 
 func (ctx *Context) WithLogger(logger logrus.FieldLogger) *Context {
