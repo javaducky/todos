@@ -13,7 +13,6 @@ import (
 	"github.com/gorilla/mux"
 	"github.com/javaducky/todos/api"
 	"github.com/javaducky/todos/app"
-	"github.com/javaducky/todos/model"
 	"github.com/sirupsen/logrus"
 	"github.com/spf13/cobra"
 )
@@ -83,8 +82,6 @@ var serveCmd = &cobra.Command{
 			serveAPI(ctx, api)
 		}()
 
-		a.Database.AutoMigrate(&model.User{}, &model.Todo{})
-		a.Database.CreateUser(&model.User{Email: "foo@example.com"})
 		wg.Wait()
 		return nil
 	},
