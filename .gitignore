@@ -3,6 +3,9 @@
 !.idea/runConfigurations/
 !.idea/vcs.xml
 
+# VS Code Files
+.vscode/*
+
 # Ignore temp files...I like VI, don't you?!
 *~
 *.swp
@@ -15,6 +18,7 @@
 **/*.BACKUP
 
 # Ignore transient build artifacts
+artifacts/
 bin/
 test/coverage.*
 test/tests.*
